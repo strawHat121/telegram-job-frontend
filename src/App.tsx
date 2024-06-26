@@ -56,7 +56,7 @@ const App: React.FC = () => {
         </div>
         <div className="max-w-md mx-auto text-center">
           <p className="text-gray-400 text-sm mb-4">
-            Jobs sourced from <a href="https://web.telegram.org/k/#@coder_jain_dev_support" target="_blank" rel="noopener noreferrer" className="text-teal-300 underline">Tech Referrals channel</a>.
+            Jobs sourced from <a href="https://web.telegram.org/k/#@reactjsadda" target="_blank" rel="noopener noreferrer" className="text-teal-300 underline">React Adda channel</a>.
           </p>
           <p className="text-gray-400 text-sm">
             Check out my <a href="https://github.com/strawHat121" target="_blank" rel="noopener noreferrer" className="text-teal-300 underline">GitHub portfolio</a>.
