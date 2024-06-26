@@ -43,14 +43,14 @@ const App: React.FC = () => {
             </button>
           </div>
           <p className="text-gray-400 text-sm mt-2">
-            By subscribing, you agree to receive daily emails from us containing job listings from the Tech Referrals channel. You can unsubscribe at any time.
+            By subscribing, you agree to receive daily emails from us containing job listings from ReactAdda channel. You can unsubscribe at any time.
           </p>
         </form>
         <div className="max-w-md mx-auto mb-12">
           <h2 className="text-xl font-bold mb-4">Why Subscribe to Telegram Job Digest?</h2>
           <ul className="list-disc list-inside text-gray-400">
             <li className="mb-2">Stay updated: Get the latest job postings delivered to your inbox daily.</li>
-            <li className="mb-2">Exclusive access: Receive job opportunities from our curated Tech Referrals channel.</li>
+            <li className="mb-2">Exclusive access: Receive job opportunities from our ReactAdda channel.</li>
             <li className="mb-2">Save time: Let us do the searching for you and streamline your job hunt process.</li>
           </ul>
         </div>
