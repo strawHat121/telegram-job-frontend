@@ -1,23 +1,27 @@
-// App.tsx
-
 import React, { useState } from "react";
 import axios from "axios";
 
 const App: React.FC = () => {
   const [email, setEmail] = useState<string>("");
+  const [error, setError] = useState<string>("");
 
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
+    setError(""); // Clear the error message when the user starts typing
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (!email.includes('@')) {
+      setError("Please enter a valid email address.");
+      return;
+    }
     try {
       await axios.post<{ email: string }>('https://telegram-job-backend.onrender.com/subscribe', { email });
-      alert('Subscription successful!');
+      alert('Please verify your email by clicking on the link sent to your email address.');
       setEmail('');
     } catch (error) {
-      alert('Subscription failed. Please try again later.');
+      setError('Subscription failed. Please try again later.');
     }
   };
 
@@ -42,6 +46,7 @@ const App: React.FC = () => {
               Subscribe
             </button>
           </div>
+          {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
           <p className="text-gray-400 text-sm mt-2">
             By subscribing, you agree to receive daily emails from us containing job listings from ReactAdda channel. You can unsubscribe at any time.
           </p>
